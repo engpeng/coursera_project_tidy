@@ -16,5 +16,5 @@ R script called run_analysis.R does the following - <br>
 
 <b>REPO CONSISTS OF:</b><br>
 1) run_analysis.R - R code that runs analyses described above with output to step 5 of analysis.<br>
-2) README.md describing how the script works<br>
-3) Code book describing the variables<br>
+2) README.md - describes how the script works<br>
+3) Code book - describes the variables<br>
