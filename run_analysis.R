@@ -6,6 +6,7 @@ library(reshape2)
 root.dir <- "UCI HAR Dataset"
 data.set <- list()
 
+## Reading files
 data.set$features <- read.table(paste(root.dir, "features.txt", sep="/"), col.names=c('id', 'name'), stringsAsFactors=FALSE)
 
 data.set$activity_labels <- read.table(paste(root.dir, "activity_labels.txt", sep="/"), col.names=c('id', 'Activity'))
@@ -18,7 +19,7 @@ data.set$train <- cbind(subject=read.table(paste(root.dir, "train", "subject_tra
                         y=read.table(paste(root.dir, "train", "y_train.txt", sep="/"), col.names="Activity.ID"),
                         x=read.table(paste(root.dir, "train", "X_train.txt", sep="/")))
 
-rename.features <- function(col) {
+rename<- function(newcolumn) {
   col <- gsub("tBody", "Time.Body", col)
   col <- gsub("tGravity", "Time.Gravity", col)
   
@@ -31,7 +32,7 @@ rename.features <- function(col) {
   col <- gsub("\\-mean\\(\\)", ".Mean", col)
   col <- gsub("\\-std\\(\\)", ".Std", col)
   
-  return(col)
+  return(newcolumn)
 }
 
 ## Extracts only the measurements on the mean and standard deviation for each measurement.
@@ -40,7 +41,7 @@ tidy <- rbind(data.set$test, data.set$train)[,c(1, 2, grep("mean\\(|std\\(", dat
 
 ## Uses descriptive activity names to name the activities in the data set
 
-names(tidy) <- c("Subject", "Activity.ID", rename.features(data.set$features$name[grep("mean\\(|std\\(", data.set$features$name)]))
+names(tidy) <- c("Subject", "Activity.ID", rename(data.set$features$name[grep("mean\\(|std\\(", data.set$features$name)]))
 
 ## Appropriately labels the data set with descriptive activity names.
 
