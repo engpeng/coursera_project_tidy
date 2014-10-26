@@ -10,5 +10,5 @@ CODE BOOK
  	Activities that subjects performed <br>
  	6 factors - laying, sitting, standing, walking upstairs, walking downstairs and walking <br><br>
  3) MeanSamples (numeric) <br>
- 	mean of an activity performed by the subject<br><br>
+ 	Mean of an activity performed by the subject<br><br>
  indicate all the variables and summaries you calculated, along with units, and any other relevant information
