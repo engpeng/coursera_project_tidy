@@ -12,4 +12,9 @@ R script called run_analysis.R does the following - <br>
 2) Extracts only the measurements on the mean and standard deviation for each measurement. <br>
 3) Uses descriptive activity names to name the activities in the data set. <br>
 4) Appropriately labels the data set with descriptive variable names. <br>
-5) From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+5) From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.<br><br>
+
+<b>REPO CONSISTS OF:</b><br>
+1) run_analysis.R - R code that runs analyses described above with output to step 5 of analysis.<br>
+2) README.md describing how the script works<br>
+3) Code book describing the variables<br>
