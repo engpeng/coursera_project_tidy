@@ -10,5 +10,5 @@ CODE BOOK
  	Activities that subjects performed <br>
  	6 factors - laying, sitting, standing, walking upstairs, walking downstairs and walking <br><br>
  3) MeanSamples (numeric) <br>
- 	Average of each variable for each activity and each subject<br><br>
-
+ 	Average of each variable for each activity and each subject<br><br><br>
+Deatils to transformations of orginal data can be found in Readme.md file 
